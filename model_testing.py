@@ -20,4 +20,7 @@ filename = 'finalized_model.sav'
 
 loaded_model = pickle.load(open(filename, 'rb'))
 result = loaded_model.score(X, y)
-print(result)
+print(result, "\n")
+import sys
+sys.stderr.write(result, "\n")
+sys.stdout.flush()
